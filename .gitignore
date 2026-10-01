@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.python-version.local
+.venv/
+venv/
+
+# Tests and tooling
+.coverage
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.sample
+
+# Azure and Foundry local state
+.azure/
+.azd/
+.foundry/
+
+# Generated workshop output
+outputs/
+artifacts/
+
+# Editors and operating systems
+.vscode/
+.DS_Store
+Thumbs.db
+*.code-workspace

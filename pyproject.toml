@@ -1,0 +1,42 @@
+[project]
+name = "maf-foundry-hackathon"
+version = "0.1.0"
+description = "Progressive Microsoft Agent Framework workshop using Microsoft Foundry"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "agent-framework-foundry>=1.13.1,<2",
+    "agent-framework-orchestrations>=1.2.0",
+    "azure-identity>=1.25,<2",
+    "ipykernel>=7,<8",
+    "jupyterlab>=4.6,<5",
+    "pydantic>=2.12,<3",
+    "python-dotenv>=1.2,<2",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "nbformat>=5.10,<6",
+    "pytest>=9,<10",
+    "ruff>=0.14,<1",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[[tool.uv.index]]
+name = "microsoft-package-feed"
+url = "https://packagefeedproxy.microsoft.io/pypi/simple"
+default = true
